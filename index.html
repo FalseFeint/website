@@ -12,7 +12,7 @@
     <!-- title -->
     <title>Tony - Portfolio Template</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.svg">
     <!-- plugin CSS -->
     <link href="static/plugin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="static/plugin/font-awesome/css/all.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@
         <nav class="navbar header-nav header-dark navbar-expand-lg">
             <div class="container">
                 <!-- Brand -->
-                <a class="navbar-brand" href="#">D.S.<span class="theme-bg"></span></a>
+                <a class="navbar-brand" href="#">Daniel Stabile<span class="theme-bg"></span></a>
                 <!-- / -->
                 <!-- Mobile Toggle -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -87,12 +87,12 @@
                             </p>
                             <div class="btn-bar go-to">
                                 <a class="m-btn m-btn-theme" href="#work">My work</a>
-                                <a class="m-btn m-btn-t-theme" href="#contactus">Hire Me</a>
+                                <a class="m-btn m-btn-t-theme" href="#contactus">Contact</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <img src="static/img/about-us.jpg" title="" alt="">
+                    <div class="col-md-6 portrait-header">
+                        <img src="static/img/portrait_circle_blue.png" title="" alt="">
                     </div>
                 </div>
             </div>
@@ -126,10 +126,10 @@
                         <div class="about-me-img box-shadow">
                             <img src="static/img/about-us.jpg" title="" alt="">
                             <div class="nav social-icon">
-                                <a href="#"><i class="fab fa-github"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a id="about-github-link" target="_blank"><i class="fab fa-github"></i></a>
+                                <a id="about-linkedin-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                <a id="about-facebook-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a id="about-insta-link" target="_blank"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
@@ -472,14 +472,18 @@
                     <div class="testimonial-col-01">
                         <div class="media">
                             <div class="img">
-                                <img src="static/img/avatra-1.jpg" title="" alt="">
+                                <img src="static/img/dave.jpeg" title="" alt="">
                             </div>
                             <div class="media-body p-25px-l">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                <p>We were very fortunate to have Daniel as an Intern during the summer of 2020. He
+                                    started making significant contributions to our Manufacturing code base almost
+                                    immediately. I was quite impressed with his work ethic and knowledge of advanced
+                                    techniques in image processing and computer science. Excellent grasp of complex
+                                    measurement systems and the software used to control them. This is someone you will
+                                    want on your team.</p>
                                 <div class="tc-info">
-                                    <h6 class="font-alt dark-color font-w-600">Nancy Bayers</h6>
-                                    <span>Co-founder</span>
+                                    <h6 class="font-alt dark-color font-w-600">Dave Beecher</h6>
+                                    <span>Director of Software Engineering, Maculogix</span>
                                 </div>
                             </div>
                         </div>
@@ -489,14 +493,19 @@
                     <div class="testimonial-col-01">
                         <div class="media">
                             <div class="img">
-                                <img src="static/img/avatra-1.jpg" title="" alt="">
+                                <img src="static/img/jimmy.jpeg" title="" alt="">
                             </div>
                             <div class="media-body p-25px-l">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                <p>Dan contributed a tremendous amount to our team during his time with us. Insatiable
+                                    curiosities drove him on a continual path of learning and self-improvement. He
+                                    always strove towards pushing the boundaries of our services and diversifying skills
+                                    that he could share with our community members. Joining our team during the
+                                    formative years of our makerspace, his insight and legacy can still be seen today.
+                                    Dan's initiative, dedication, and cheerful personality will serve as invaluable
+                                    parts of any future team he joins!</p>
                                 <div class="tc-info">
-                                    <h6 class="font-alt dark-color font-w-600">Nancy Bayers</h6>
-                                    <span>Co-founder</span>
+                                    <h6 class="font-alt dark-color font-w-600">Jimmy McKee</h6>
+                                    <span>Makerspace Manager, Cornell</span>
                                 </div>
                             </div>
                         </div>
@@ -741,10 +750,10 @@
             <div class="row align-items-center">
                 <div class="col-md-6 m-10px-tb">
                     <div class="nav justify-content-center justify-content-md-start">
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>>
+                        <a id="foot-github-link" target="_blank"><i class="fab fa-github"></i></a>
+                        <a id="foot-linkedin-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a id="foot-facebook-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a id="foot-insta-link" target="_blank"><i class="fab fa-instagram"></i></a>>
                     </div>
                 </div>
                 <div class="col-md-6 m-10px-tb text-center text-md-right">
@@ -772,5 +781,23 @@
     <!-- end -->
     <!-- end body -->
 </body>
+
+<!-- Set link urls here for convenience-->
+<script type="text/javascript">
+    var github_url = "https://github.coecis.cornell.edu/dis52";
+    var linkedin_url = "https://www.linkedin.com/in/danstabile/"
+    var facebook_url = "https://www.facebook.com/daniel.stabile.7/";
+    var insta_url = "https://www.instagram.com/danielistabile/"
+
+    document.getElementById("about-github-link").href = github_url;
+    document.getElementById("about-linkedin-link").href = linkedin_url;
+    document.getElementById("about-facebook-link").href = facebook_url;
+    document.getElementById("about-insta-link").href = insta_url;
+
+    document.getElementById("foot-github-link").href = github_url;
+    document.getElementById("foot-linkedin-link").href = linkedin_url;
+    document.getElementById("foot-facebook-link").href = facebook_url;
+    document.getElementById("foot-insta-link").href = insta_url
+</script>
 
 </html>
