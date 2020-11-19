@@ -10,7 +10,7 @@
     <meta name="keywords" content="Tony - Portfolio Template">
     <meta name="description" content="Tony - Portfolio Template">
     <!-- title -->
-    <title>Tony - Portfolio Template</title>
+    <title>Daniel Stabile</title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="favicon.svg">
     <!-- plugin CSS -->
@@ -22,6 +22,39 @@
     <link href="static/plugin/magnific/magnific-popup.css" rel="stylesheet">
     <!-- theme css -->
     <link href="static/style/master.css" rel="stylesheet">
+    <!-- JQuery Map -->
+    <link href="../dist/jqvmap.css" media="screen" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../dist/jquery.vmap.js"></script>
+    <script type="text/javascript" src="../dist/maps/jquery.vmap.world.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        // var fs = require('fs');
+        // var text = fs.readFileSync("./countries.txt");
+        var countries = ['ru', 'fr'];
+        jQuery(document).ready(function () {
+            jQuery('#vmap').vectorMap({
+                map: 'world_en',
+                backgroundColor: '#ffffff',
+                borderColor: '#f4f3f0',
+                borderOpacity: 0.25,
+                borderWidth: 0,
+                color: '#4db4d7',
+                enableZoom: false,
+                hoverColor: '#0076BE',
+                hoverOpacity: null,
+                normalizeFunction: 'linear',
+                scaleColors: ['#b6d6ff', '#005ace'],
+                selectedColor: '#c9dfaf',
+                selectedRegions: null,
+                showTooltip: true,
+            });
+            console.log(countries.length)
+            // Iterate through all countires and re-color
+            for (var i = 0; i < countries.length; i++) {
+                jQuery('#vmap').vectorMap('set', 'colors', countries[i], '#000000');
+            }
+        });
+    </script>
 </head>
 <!-- Body Start -->
 
@@ -173,7 +206,7 @@
                 </div>
                 <div class="row justify-content-between">
                     <div class="col-lg-6 m-15px-tb">
-                        <h4 class="theme-color">Code</h4>
+                        <h4 class="theme-color">CODE</h4>
                         <!-- skill -->
                         <div class="skill-lt">
                             <h6 class="dark-color">Python</h6>
@@ -264,7 +297,7 @@
                         <!-- end skill -->
                     </div>
                     <div class="col-lg-6 m-15px-tb">
-                        <h4 class="theme-color">Tools</h4>
+                        <h4 class="theme-color">TOOLS</h4>
                         <!-- skill -->
                         <div class="skill-lt">
                             <h6 class="dark-color">Linux</h6>
@@ -309,7 +342,7 @@
                             </div>
                         </div>
                         <!-- end skill -->
-                        <h4 class="theme-color" style="margin-top:18px;">Craft</h4>
+                        <h4 class="theme-color" style="margin-top:18px;">CRAFT</h4>
                         <!-- skill -->
                         <div class="skill-lt">
                             <h6 class="dark-color">Illustrator</h6>
@@ -374,11 +407,11 @@
                     <div class="grid-item product branding">
                         <div class="portfolio-box-01">
                             <div class="portfolio-img">
-                                <img src="static/img/portfolio-1.jpg" title="" alt="">
+                                <img src="static/img/mri.svg" title="" alt="">
                             </div>
                             <div class="portfolio-info">
-                                <h5>Our Photography</h5>
-                                <span>Design</span>
+                                <h5>Project</h5>
+                                <span>2020</span>
                             </div>
                             <a class="link-overlay" href="#"></a>
                         </div>
@@ -386,11 +419,11 @@
                     <div class="grid-item product branding">
                         <div class="portfolio-box-01">
                             <div class="portfolio-img">
-                                <img src="static/img/portfolio-1.jpg" title="" alt="">
+                                <img src="static/img/mask.svg" title="" alt="">
                             </div>
                             <div class="portfolio-info">
-                                <h5>Our Photography</h5>
-                                <span>Design</span>
+                                <h5>Project</h5>
+                                <span>2020</span>
                             </div>
                             <a class="link-overlay" href="#"></a>
                         </div>
@@ -398,11 +431,11 @@
                     <div class="grid-item product branding">
                         <div class="portfolio-box-01">
                             <div class="portfolio-img">
-                                <img src="static/img/portfolio-1.jpg" title="" alt="">
+                                <img src="static/img/brux.svg" title="" alt="">
                             </div>
                             <div class="portfolio-info">
-                                <h5>Our Photography</h5>
-                                <span>Design</span>
+                                <h5>Project</h5>
+                                <span>2020</span>
                             </div>
                             <a class="link-overlay" href="#"></a>
                         </div>
@@ -410,11 +443,11 @@
                     <div class="grid-item product branding">
                         <div class="portfolio-box-01">
                             <div class="portfolio-img">
-                                <img src="static/img/portfolio-1.jpg" title="" alt="">
+                                <img src="static/img/mips.svg" title="" alt="">
                             </div>
                             <div class="portfolio-info">
-                                <h5>Our Photography</h5>
-                                <span>Design</span>
+                                <h5>Research</h5>
+                                <span>2020</span>
                             </div>
                             <a class="link-overlay" href="#"></a>
                         </div>
@@ -422,11 +455,11 @@
                     <div class="grid-item product branding">
                         <div class="portfolio-box-01">
                             <div class="portfolio-img">
-                                <img src="static/img/portfolio-1.jpg" title="" alt="">
+                                <img src="static/img/oCaml.svg" title="" alt="">
                             </div>
                             <div class="portfolio-info">
-                                <h5>Our Photography</h5>
-                                <span>Design</span>
+                                <h5>Project</h5>
+                                <span>2019</span>
                             </div>
                             <a class="link-overlay" href="#"></a>
                         </div>
@@ -434,11 +467,23 @@
                     <div class="grid-item product branding">
                         <div class="portfolio-box-01">
                             <div class="portfolio-img">
-                                <img src="static/img/portfolio-1.jpg" title="" alt="">
+                                <img src="static/img/riscv.svg" title="" alt="">
                             </div>
                             <div class="portfolio-info">
-                                <h5>Our Photography</h5>
-                                <span>Design</span>
+                                <h5>Project</h5>
+                                <span>2019</span>
+                            </div>
+                            <a class="link-overlay" href="#"></a>
+                        </div>
+                    </div> <!-- grid item -->
+                    <div class="grid-item product branding">
+                        <div class="portfolio-box-01">
+                            <div class="portfolio-img">
+                                <img src="static/img/futbol.svg" title="" alt="">
+                            </div>
+                            <div class="portfolio-info">
+                                <h5>Research</h5>
+                                <span>2019</span>
                             </div>
                             <a class="link-overlay" href="#"></a>
                         </div>
@@ -471,9 +516,6 @@
                     <!-- testimonials -->
                     <div class="testimonial-col-01">
                         <div class="media">
-                            <div class="img">
-                                <img src="static/img/dave.jpeg" title="" alt="">
-                            </div>
                             <div class="media-body p-25px-l">
                                 <p>We were very fortunate to have Daniel as an Intern during the summer of 2020. He
                                     started making significant contributions to our Manufacturing code base almost
@@ -492,9 +534,6 @@
                     <!-- testimonials -->
                     <div class="testimonial-col-01">
                         <div class="media">
-                            <div class="img">
-                                <img src="static/img/jimmy.jpeg" title="" alt="">
-                            </div>
                             <div class="media-body p-25px-l">
                                 <p>Dan contributed a tremendous amount to our team during his time with us. Insatiable
                                     curiosities drove him on a continual path of learning and self-improvement. He
@@ -569,6 +608,7 @@
                         </div>
                     </div>
                 </div>
+                <div id="vmap" style="width: 600px; height: 400px;"></div>
                 <div class="row">
                     <div class="col-lg-4 m-15px-tb">
                         <div class="blog-grid">
@@ -764,8 +804,8 @@
     </footer>
     <!-- footer End -->
     <!-- jquery -->
-    <script src="static/js/jquery-3.2.1.min.js"></script>
-    <script src="static/js/jquery-migrate-3.0.0.min.js"></script>
+    <!-- <script src="static/js/jquery-3.2.1.min.js"></script> -->
+    <!-- <script src="static/js/jquery-migrate-3.0.0.min.js"></script> -->
     <!-- end jquery -->
     <!-- appear -->
     <script src="static/plugin/appear/jquery.appear.js"></script>
