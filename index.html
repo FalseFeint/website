@@ -28,9 +28,11 @@
     <script type="text/javascript" src="../dist/jquery.vmap.js"></script>
     <script type="text/javascript" src="../dist/maps/jquery.vmap.world.js" charset="utf-8"></script>
     <script type="text/javascript">
-        // var fs = require('fs');
-        // var text = fs.readFileSync("./countries.txt");
-        var countries = ['ru', 'fr'];
+        var countries
+        jQuery.get('countries.txt', function (data) {
+            countries = data.split('\n')
+            console.log(countries)
+        });
         jQuery(document).ready(function () {
             jQuery('#vmap').vectorMap({
                 map: 'world_en',
@@ -53,7 +55,9 @@
             for (var i = 0; i < countries.length; i++) {
                 jQuery('#vmap').vectorMap('set', 'colors', countries[i], '#000000');
             }
+            sizeMap();//TODO Is this working?
         });
+        jQuery(window).on("resize", sizeMap);
     </script>
 </head>
 <!-- Body Start -->
@@ -604,11 +608,15 @@
                     <div class="col-md-12">
                         <div class="section-title">
                             <h3 class="dark-color text-uppercase">Latest Blogs</h3>
-                            <p class="text-uppercase small">An aspiring engineer-physician</p>
+                            <p class="text-uppercase small">An anvid traveller</p>
                         </div>
                     </div>
                 </div>
-                <div id="vmap" style="width: 600px; height: 400px;"></div>
+                <div class="row map-container">
+
+                    <div id="vmap" style="width: 600px; height: 400px;"></div>
+
+                </div>
                 <div class="row">
                     <div class="col-lg-4 m-15px-tb">
                         <div class="blog-grid">
