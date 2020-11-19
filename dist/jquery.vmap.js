@@ -7,17 +7,6 @@
  * @builddate 2016/06/02
  */
 
-function sizeMap() {
-  var containerWidth = $('.map-container').width(),
-    containerHeight = (containerWidth / 1.4);
-  console.log(containerHeight)
-
-  $('#vmap').css({
-    'width': containerWidth,
-    'height': containerHeight
-  });
-}
-
 var VectorCanvas = function (width, height, params) {
   this.mode = window.SVGAngle ? 'svg' : 'vml';
   this.params = params;

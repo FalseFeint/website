@@ -55,9 +55,7 @@
             for (var i = 0; i < countries.length; i++) {
                 jQuery('#vmap').vectorMap('set', 'colors', countries[i], '#0076BE');
             }
-            sizeMap();//TODO Is this working?
         });
-        jQuery(window).on("resize", sizeMap);
     </script>
 </head>
 <!-- Body Start -->
@@ -618,7 +616,7 @@
                     </div>
                     <div class="col-md-8">
                         <div class="row map-container">
-                            <div id="vmap" style="width: 600px; height: 400px;"></div>
+                            <div class="map" id="vmap" style="width: 600px; height: 400px;"></div>
                         </div>
                     </div>
 
