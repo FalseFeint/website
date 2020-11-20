@@ -10,15 +10,40 @@
 function sizeMap() {
   var containerWidth = $('.map-container').width(),
     containerHeight = (containerWidth / 1.4);
-  console.log("here")
 
   $('#vmap').css({
     'width': containerWidth,
     'height': containerHeight
+  })
+
+  $('#vmap').children().css({
+    'width': containerWidth,
+    'height': containerHeight
   });
 
-  $('#vmap').hide().show(0);
-  console.log("hide/show")
+  $('#vmap').children().children().css({
+    'width': containerWidth,
+    'height': containerHeight
+  });
+
+  var childchild = $('#vmap').children().children();
+  console.log(childchild);
+
+  console.log(String(containerWidth));
+
+  $('svg').removeAttr('viewbox');
+  $('svg').each(function () { $(this)[0].setAttribute('viewbox', '0 0 ' + String(containerWidth) + ' ' + String(containerHeight)) });
+  $('#vmap').children().each(function () { $(this)[0].setAttribute('width', containerWidth) });
+  $('#vmap').children().each(function () { $(this)[0].setAttribute('height', containerHeight) });
+
+
+  $('g').removeAttr('viewbox');
+  $('g').each(function () { $(this)[0].setAttribute('viewbox', '0 0 ' + String(containerWidth) + ' ' + String(containerHeight)) });
+
+  var children = $('#vmap').children();
+
+  console.log(children);
+
 }
 
 var VectorCanvas = function (width, height, params) {

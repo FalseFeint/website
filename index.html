@@ -58,8 +58,7 @@
                 jQuery('#vmap').vectorMap('set', 'colors', countries[i], '#0076BE');
             }
         });
-        jQuery(window).on("load", function () { sizeMap; }
-        );
+        jQuery(window).on("load", sizeMap);
     </script>
 </head>
 <!-- Body Start -->
@@ -618,10 +617,9 @@
                                 hundred seventy-two
                             </span>to go.</h6>
                     </div>
-                    <div class="col-md-8 map-container" style="min-height: 300px;">
+                    <div class="col-md-8 map-container">
                         <div class="map " id="vmap"></div>
                     </div>
-
                 </div>
 
                 <div class="row">
@@ -823,6 +821,17 @@
     document.getElementById("foot-linkedin-link").href = linkedin_url;
     document.getElementById("foot-facebook-link").href = facebook_url;
     document.getElementById("foot-insta-link").href = insta_url
+
+    jQuery(window).on('load', function () {
+        setTimeout(function () {
+            console.log("5sec")
+            $("#vmap").hide().show()
+        }, 100);
+    });
+
+    jQuery(document).on('ready', function () {
+        setTimeout(function () { sizeMap(); console.log("done") }, 5000)
+    });
 </script>
 
 </html>
