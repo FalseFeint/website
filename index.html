@@ -27,38 +27,46 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="./dist/jquery.vmap.js"></script>
     <script type="text/javascript" src="./dist/maps/jquery.vmap.world.js" charset="utf-8"></script>
+    <!-- </script> -->
     <script type="text/javascript">
-        var countries
         jQuery.get('countries.txt', function (data) {
             countries = data.split('\n')
         });
-        jQuery(document).ready(function () {
-            jQuery('#vmap').vectorMap({
-                map: 'world_en',
-                backgroundColor: '#ffffff',
-                borderColor: '#f4f3f0',
-                borderOpacity: 0.25,
-                borderWidth: 0,
-                color: '#4db4d7',
-                enableZoom: false,
-                hoverColor: '#48bf91',
-                hoverOpacity: null,
-                normalizeFunction: 'linear',
-                scaleColors: ['#b6d6ff', '#005ace'],
-                selectedColor: '#48bf91',
-                selectedRegions: null,
-                showTooltip: true,
+        jQuery(window).on('load', function () {
+            var ratio = 0.60;
+            var containerHeight = $('.map-container').height();
+            // console.log(containerWidth)
+            console.log('hello')
+            $(document).ready(function () {
+                $('#vmap').vectorMap({
+                    map: 'world_en',
+                    backgroundColor: '#ffffff',
+                    borderColor: '#f4f3f0',
+                    borderOpacity: 0.25,
+                    borderWidth: 0,
+                    color: '#4db4d7',
+                    enableZoom: false,
+                    hoverColor: '#48bf91',
+                    hoverOpacity: null,
+                    normalizeFunction: 'linear',
+                    scaleColors: ['#b6d6ff', '#005ace'],
+                    selectedColor: '#48bf91',
+                    selectedRegions: null,
+                    showTooltip: true,
+                });
+                $("#vmap > *").css("height", containerHeight);
+                $("#vmap > *").css("preserveAspectRatio", "xMaxYMin meet")
             });
-
+            $(window).resize(function () {
+                $("#vmap > *").css("height", containerHeight);
+            });
         });
-        jQuery(window).on("resize", sizeMap);
         jQuery(window).on("load", function () {
             // Iterate through all countires and re-color
             for (var i = 0; i < countries.length; i++) {
                 jQuery('#vmap').vectorMap('set', 'colors', countries[i], '#0076BE');
             }
         });
-        jQuery(window).on("load", sizeMap);
     </script>
 </head>
 <!-- Body Start -->
@@ -606,18 +614,18 @@
         <section id="blog" class="section white-bg">
             <div class="container">
                 <div class="row sm-m-25px-b m-35px-b">
-                    <div class="col-md-4">
-                        <div class="section-title sm-m-25px-b lg-m-75px-b xl-m-100px-b">
+                    <div class="col-md-3">
+                        <div class="section-title sm-m-30px-b lg-m-30px-b xl-m-100px-b">
                             <h3 class="dark-color text-uppercase">Travel</h3>
                             <p class="text-uppercase small">An anvid traveller</p>
                         </div>
-                        <h5 class='text-center'>I love exploring new countries and cultures</h5>
-                        <h6 class='text-center'><span class="theme-color"> Twenty-three </span> down, <span
+                        <p class='text-center'>I love exploring new countries and cultures</p>
+                        <p class='text-center'><span class="theme-color"> Twenty-three </span> down, <span
                                 class="theme-color">one
                                 hundred seventy-two
-                            </span>to go.</h6>
+                            </span>to go.</p>
                     </div>
-                    <div class="col-md-8 map-container">
+                    <div class="col-md-9 map-container" style="min-height: 300px;">
                         <div class="map " id="vmap"></div>
                     </div>
                 </div>
@@ -822,16 +830,16 @@
     document.getElementById("foot-facebook-link").href = facebook_url;
     document.getElementById("foot-insta-link").href = insta_url
 
-    jQuery(window).on('load', function () {
-        setTimeout(function () {
-            console.log("5sec")
-            $("#vmap").hide().show()
-        }, 100);
-    });
+    // jQuery(window).on('load', function () {
+    //     setTimeout(function () {
+    //         console.log("5sec")
+    //         $("#vmap").hide().show()
+    //     }, 100);
+    // });
 
-    jQuery(document).on('ready', function () {
-        setTimeout(function () { sizeMap(); console.log("done") }, 5000)
-    });
+    // jQuery(document).on('ready', function () {
+    //     setTimeout(function () { sizeMap(); console.log("done") }, 5000)
+    // });
 </script>
 
 </html>
