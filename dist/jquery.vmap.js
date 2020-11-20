@@ -16,6 +16,9 @@ function sizeMap() {
     'width': containerWidth,
     'height': containerHeight
   });
+
+  $('#vmap').hide().show(0);
+  console.log("hide/show")
 }
 
 var VectorCanvas = function (width, height, params) {
