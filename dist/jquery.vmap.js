@@ -7,6 +7,17 @@
  * @builddate 2016/06/02
  */
 
+function sizeMap() {
+  var containerWidth = $('.map-container').width(),
+    containerHeight = (containerWidth / 1.4);
+  console.log("here")
+
+  $('#vmap').css({
+    'width': containerWidth,
+    'height': containerHeight
+  });
+}
+
 var VectorCanvas = function (width, height, params) {
   this.mode = window.SVGAngle ? 'svg' : 'vml';
   this.params = params;
@@ -216,11 +227,11 @@ var JQVMap = function (params) {
   if (params.showTooltip) {
     params.container.mousemove(function (e) {
       if (map.label.is(':visible')) {
-        var left = e.pageX - 15 - map.labelWidth;
-        var top = e.pageY - 15 - map.labelHeight;
+        var left = e.pageX - 1.4 - map.labelWidth;
+        var top = e.pageY - 1.4 - map.labelHeight;
 
         if (left < 0) {
-          left = e.pageX + 15;
+          left = e.pageX + 1.4;
         }
         if (top < 0) {
           top = e.pageY + 15;

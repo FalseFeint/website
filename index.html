@@ -49,6 +49,10 @@
                 selectedRegions: null,
                 showTooltip: true,
             });
+
+        });
+        jQuery(window).on("resize", sizeMap);
+        jQuery(window).on("load", function () {
             // Iterate through all countires and re-color
             for (var i = 0; i < countries.length; i++) {
                 jQuery('#vmap').vectorMap('set', 'colors', countries[i], '#0076BE');
@@ -609,13 +613,11 @@
                         <h5 class='text-center'>I love exploring new countries and cultures</h5>
                         <h6 class='text-center'><span class="theme-color"> Twenty-three </span> down, <span
                                 class="theme-color">one
-                                hundred
+                                hundred seventy-two
                             </span>to go.</h6>
                     </div>
-                    <div class="col-md-8">
-                        <div class="row map-container">
-                            <div class="map" id="vmap" style="width: 600px; height: 400px;"></div>
-                        </div>
+                    <div class="col-md-8 map-container" style="min-height: 300px;">
+                        <div class="map " id="vmap"></div>
                     </div>
 
                 </div>
