@@ -31,7 +31,6 @@
         var countries
         jQuery.get('countries.txt', function (data) {
             countries = data.split('\n')
-            console.log(countries)
         });
         jQuery(document).ready(function () {
             jQuery('#vmap').vectorMap({
@@ -50,7 +49,6 @@
                 selectedRegions: null,
                 showTooltip: true,
             });
-            console.log(countries.length)
             // Iterate through all countires and re-color
             for (var i = 0; i < countries.length; i++) {
                 jQuery('#vmap').vectorMap('set', 'colors', countries[i], '#0076BE');
