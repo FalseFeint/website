@@ -48,6 +48,10 @@ Resize image to be 60% of div width */
     width: 60%; } }
 
 .xl-m-50px-b{
+  margin-bottom: 50px
+}
+
+.xl-m-100px-b{
   margin-bottom: 100px
 }
 
