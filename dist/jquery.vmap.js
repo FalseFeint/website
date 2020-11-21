@@ -2,7 +2,7 @@
  * JQVMap: jQuery Vector Map Library
  * @author JQVMap <me@peterschmalfeldt.com>
  * @version 1.5.1
- * @link http://jqvmap.com
+ * @link https://jqvmap.com
  * @license https://github.com/manifestinteractive/jqvmap/blob/master/LICENSE
  * @builddate 2016/06/02
  */
@@ -43,7 +43,7 @@ var VectorCanvas = function (width, height, params) {
 };
 
 VectorCanvas.prototype = {
-  svgns: 'http://www.w3.org/2000/svg',
+  svgns: 'https://www.w3.org/2000/svg',
   mode: 'svg',
   width: 0,
   height: 0,
@@ -309,7 +309,7 @@ JQVMap.prototype = {
   zoomCurStep: 1
 };
 
-JQVMap.xlink = 'http://www.w3.org/1999/xlink';
+JQVMap.xlink = 'https://www.w3.org/1999/xlink';
 JQVMap.mapIndex = 1;
 JQVMap.maps = {};
 
