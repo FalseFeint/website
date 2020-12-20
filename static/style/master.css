@@ -90,7 +90,23 @@ Resize image to be 60% of div width */
   color: rgb(112, 112, 112); 
 }
 
+.instructables-white{
+  height: 50%;
+  /* filter: brightness(0) invert(1); */
+}
 
+.instructables-gray{
+  height: 15px;
+  filter: brightness(0.5) invert(1);
+}
+
+.instructables-gray:hover{
+  filter: brightness(0) invert(1);
+}
+
+.filter-white{
+  filter: brightness(0) invert(1);
+}
 /*----------------------------------
 * Buttons
 ----------------------------------*/
