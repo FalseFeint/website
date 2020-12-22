@@ -97,14 +97,17 @@ Resize image to be 60% of div width */
 
 .instructables-gray{
   height: 15px;
+  -webkit-filter: brightness(0.5) invert(1);
   filter: brightness(0.5) invert(1);
 }
 
 .instructables-gray:hover{
   filter: brightness(0) invert(1);
+  -webkit-filter: brightness(0) invert(1);
 }
 
 .filter-white{
+  -webkit-filter: brightness(0) invert(1);
   filter: brightness(0) invert(1);
 }
 /*----------------------------------
