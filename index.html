@@ -1092,52 +1092,7 @@
     <link href="static/plugin/magnific/magnific-popup.css" rel="stylesheet" media="print" onload="this.media='all'">
     <!-- theme css -->
     <link href="static/style/master.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <!-- JQuery Map -->
-    <link href="./dist/jqvmap.css" media="print" rel="stylesheet" type="text/css" onload="this.media='all'">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script async type="text/javascript" src="./dist/jquery.vmap.js"></script>
-    <script async type="text/javascript" src="./dist/maps/jquery.vmap.world.js" charset="utf-8"></script>
-    <!-- </script> -->
-    <script async type="text/javascript">
-        jQuery.get('countries.txt', function (data) {
-            countries = data.split('\n')
-        });
-        jQuery(window).on('load', function () {
-            var ratio = 0.60;
-            var containerHeight = $('.map-container').height();
-            // console.log(containerWidth)
-            console.log('hello')
-            $(document).ready(function () {
-                $('#vmap').vectorMap({
-                    map: 'world_en',
-                    backgroundColor: '#ffffff',
-                    borderColor: '#f4f3f0',
-                    borderOpacity: 0.25,
-                    borderWidth: 0,
-                    color: '#4db4d7',
-                    enableZoom: false,
-                    hoverColor: '#48bf91',
-                    hoverOpacity: null,
-                    normalizeFunction: 'linear',
-                    scaleColors: ['#b6d6ff', '#005ace'],
-                    selectedColor: '#48bf91',
-                    selectedRegions: null,
-                    showTooltip: true,
-                });
-                $("#vmap > *").css("height", containerHeight);
-                $("#vmap > *").css("preserveAspectRatio", "xMaxYMin meet")
-            });
-            $(window).resize(function () {
-                $("#vmap > *").css("height", containerHeight);
-            });
-        });
-        jQuery(window).on("load", function () {
-            // Iterate through all countires and re-color
-            for (var i = 0; i < countries.length; i++) {
-                jQuery('#vmap').vectorMap('set', 'colors', countries[i], '#0076BE');
-            }
-        });
-    </script>
+
     <!-- Cards Gallery -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" /> -->
@@ -2804,21 +2759,69 @@
         </div>
     </footer>
     <!-- footer End -->
+
+    <!-- JQuery Map -->
+    <link href="./dist/jqvmap.css" media="print" rel="stylesheet" type="text/css" onload="this.media='all'">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script defer type="text/javascript" src="./dist/jquery.vmap.js"></script>
+    <script defer type="text/javascript" src="./dist/maps/jquery.vmap.world.js" charset="utf-8"></script>
+    <!-- </script> -->
+    <script defer type="text/javascript">
+        jQuery.get('countries.txt', function (data) {
+            countries = data.split('\n')
+        });
+        jQuery(window).on('load', function () {
+            var ratio = 0.60;
+            var containerHeight = $('.map-container').height();
+            // console.log(containerWidth)
+            console.log('hello')
+            $(document).ready(function () {
+                $('#vmap').vectorMap({
+                    map: 'world_en',
+                    backgroundColor: '#ffffff',
+                    borderColor: '#f4f3f0',
+                    borderOpacity: 0.25,
+                    borderWidth: 0,
+                    color: '#4db4d7',
+                    enableZoom: false,
+                    hoverColor: '#48bf91',
+                    hoverOpacity: null,
+                    normalizeFunction: 'linear',
+                    scaleColors: ['#b6d6ff', '#005ace'],
+                    selectedColor: '#48bf91',
+                    selectedRegions: null,
+                    showTooltip: true,
+                });
+                $("#vmap > *").css("height", containerHeight);
+                $("#vmap > *").css("preserveAspectRatio", "xMaxYMin meet")
+            });
+            $(window).resize(function () {
+                $("#vmap > *").css("height", containerHeight);
+            });
+        });
+        jQuery(window).on("load", function () {
+            // Iterate through all countires and re-color
+            for (var i = 0; i < countries.length; i++) {
+                jQuery('#vmap').vectorMap('set', 'colors', countries[i], '#0076BE');
+            }
+        });
+    </script>
+
     <!-- jquery -->
     <!-- <script src="static/js/jquery-3.2.1.min.js"></script> -->
     <!-- <script src="static/js/jquery-migrate-3.0.0.min.js"></script> -->
     <!-- end jquery -->
     <!-- appear -->
-    <script src="static/plugin/appear/jquery.appear.js"></script>
+    <script defer src="static/plugin/appear/jquery.appear.js"></script>
     <!-- end appear -->
     <!--bootstrap-->
-    <script src="static/plugin/bootstrap/js/popper.min.js"></script>
-    <script src="static/plugin/bootstrap/js/bootstrap.js"></script>
+    <script defer src="static/plugin/bootstrap/js/popper.min.js"></script>
+    <script defer src="static/plugin/bootstrap/js/bootstrap.js"></script>
     <!--end bootstrap-->
     <!-- End -->
     <!-- custom js -->
-    <script src="static/js/custom.js"></script>
-    <script src="static/js/mail_send.js"></script>
+    <script defer src="static/js/custom.js"></script>
+    <script defer src="static/js/mail_send.js"></script>
     <!-- end -->
     <!-- end body -->
 
@@ -2864,7 +2867,7 @@
 </body>
 
 <!-- Set link urls here for convenience-->
-<script type="text/javascript">
+<script defer type="text/javascript">
     var github_url = "https://github.coecis.cornell.edu/dis52";
     var linkedin_url = "https://www.linkedin.com/in/danstabile/"
     var facebook_url = "https://www.facebook.com/daniel.stabile.7/";
