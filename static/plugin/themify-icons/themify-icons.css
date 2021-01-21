@@ -5,6 +5,7 @@
 		url('fonts/themify.woff?-fvbane') format('woff'),
 		url('fonts/themify.ttf?-fvbane') format('truetype'),
 		url('fonts/themify.svg?-fvbane#themify') format('svg');
+	font-display: swap;
 	font-weight: normal;
 	font-style: normal;
 }
