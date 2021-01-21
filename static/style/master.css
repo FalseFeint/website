@@ -46,6 +46,7 @@ Resize image to be 60% of div width */
     display: block;
     margin-left: auto;
     margin-right: auto;
+    height: auto;
     width: 60%; } }
 
 .xl-m-50px-b{
