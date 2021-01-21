@@ -37,15 +37,19 @@ Table of contents
 /* Reverse order of elements in container
 in order to get the portrait on top of text.
 Resize image to be 60% of div width */
+
+.portrait-header img{
+  margin: auto;
+  height: auto;
+  width: 100%; } 
+
 @media (max-width: 768px) {
   .p-100px-tb{
     flex-direction: column-reverse;
   }
 
   .portrait-header img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     height: auto;
     width: 60%; } }
 
