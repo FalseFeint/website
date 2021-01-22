@@ -52,8 +52,7 @@ Resize image to be 60% of div width */
 
 .portfolio-box-01 img{
   height: auto;
-  width: 100%; 
-} 
+  width: 100%; } 
 
 .xl-m-50px-b{
   margin-bottom: 50px
@@ -282,7 +281,7 @@ Resize image to be 60% of div width */
 *	General
 ------------------------*/
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 15px;
   color: #555a64;
   font-weight: 400;
@@ -614,7 +613,6 @@ h6 {
       .fixed-header .header-dark.header-transparent {
         background: #ffffff; }
     .header-dark .navbar-brand {
-      font-family: 'Great Vibes', cursive;
       font-weight: 600;
       font-size: 24px;
       color: #090a0c; }
@@ -675,7 +673,6 @@ h6 {
     .fixed-header .header-nav {
       background: #ffffff; }
     .header-nav .navbar-brand {
-      font-family: 'Great Vibes', cursive;
       font-weight: 600;
       font-size: 24px;
       color: #090a0c; }
@@ -921,7 +918,7 @@ h6 {
   opacity: 1; }
 
 .font-alt {
-  font-family: "Poppins", sans-serif; }
+  font-family: "Arial", sans-serif; }
 
 /*	Property
 ---------------------------*/
