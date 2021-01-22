@@ -50,6 +50,11 @@ Resize image to be 60% of div width */
     height: auto;
     width: 60%; } }
 
+.portfolio-box-01 img{
+  height: auto;
+  width: 100%; 
+} 
+
 .xl-m-50px-b{
   margin-bottom: 50px
 }
