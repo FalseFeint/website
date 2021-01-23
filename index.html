@@ -1096,6 +1096,16 @@
             margin-bottom: 25px;
             border: 1px solid #edd
         }
+
+        .map-container {
+            height: 28vw;
+        }
+
+        @media (max-width: 768px) {
+            .map-container {
+                height: 56vw;
+            }
+        }
     </style>
 
 
@@ -2571,121 +2581,11 @@
                                 hundred seventy-two
                             </span>to go.</p> -->
                     </div>
-                    <div class="col-md-9 map-container" style="min-height: 300px;">
+                    <div class="col-md-9 map-container">
                         <div class="map " id="vmap"></div>
                     </div>
                 </div>
-
-                <!-- <div class="gallery-block compact-gallery">
-                    <div class="row no-gutters">
-                        <div class="col-md-3 col-lg-3 item zoom-on-hover">
-                            <a class="lightbox" href="static/img/image1.jpg">
-                                <img class="img-fluid image" src="static/img/image1.jpg">
-                                <span class="description">
-                                    <span class="description-heading">Lorem Ipsum</span>
-                                    <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        elit.
-                                        Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-lg-3 item zoom-on-hover">
-                            <a class="lightbox" href="static/img/image2.jpg">
-                                <img class="img-fluid image" src="static/img/image2.jpg">
-                                <span class="description">
-                                    <span class="description-heading">Lorem Ipsum</span>
-                                    <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        elit.
-                                        Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-lg-3 item zoom-on-hover">
-                            <a class="lightbox" href="static/img/image3.jpg">
-                                <img class="img-fluid image" src="static/img/image3.jpg">
-                                <span class="description">
-                                    <span class="description-heading">Lorem Ipsum</span>
-                                    <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        elit.
-                                        Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-lg-3 item zoom-on-hover">
-                            <a class="lightbox" href="static/img/image4.jpg">
-                                <img class="img-fluid image" src="static/img/image4.jpg">
-                                <span class="description">
-                                    <span class="description-heading">Lorem Ipsum</span>
-                                    <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        elit.
-                                        Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-lg-3 item zoom-on-hover">
-                            <a class="lightbox" href="static/img/image5.jpg">
-                                <img class="img-fluid image" src="static/img/image5.jpg">
-                                <span class="description">
-                                    <span class="description-heading">Lorem Ipsum</span>
-                                    <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        elit.
-                                        Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-lg-3 item zoom-on-hover">
-                            <a class="lightbox" href="static/img/image6.jpg">
-                                <img class="img-fluid image" src="static/img/image6.jpg">
-                                <span class="description">
-                                    <span class="description-heading">Lorem Ipsum</span>
-                                    <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        elit.
-                                        Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-lg-3 item zoom-on-hover">
-                            <a class="lightbox" href="static/img/image7.jpg">
-                                <img class="img-fluid image" src="static/img/image7.jpg">
-                                <span class="description">
-                                    <span class="description-heading">Lorem Ipsum</span>
-                                    <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        elit.
-                                        Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-lg-3 item zoom-on-hover">
-                            <a class="lightbox" href="static/img/image8.jpg">
-                                <img class="img-fluid image" src="static/img/image8.jpg">
-                                <span class="description">
-                                    <span class="description-heading">Lorem Ipsum</span>
-                                    <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        elit.
-                                        Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-lg-3 item zoom-on-hover">
-                            <a class="lightbox" href="static/img/image9.jpg">
-                                <img class="img-fluid image" src="static/img/image9.jpg">
-                                <span class="description">
-                                    <span class="description-heading">Lorem Ipsum</span>
-                                    <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        elit.
-                                        Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div> -->
         </section>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
-        <script>
-            baguetteBox.run('.compact-gallery', { animation: 'slideIn' });
-        </script> -->
-
-
 
         <!--
               ____            _             _   
@@ -2837,9 +2737,9 @@
                 $("#vmap > *").css("height", containerHeight);
                 $("#vmap > *").css("preserveAspectRatio", "xMaxYMin meet")
             });
-            $(window).resize(function () {
-                $("#vmap > *").css("height", containerHeight);
-            });
+            // $(window).resize(function () {
+            //     $("#vmap > *").css("height", containerHeight);
+            // });
         });
         jQuery(window).on("load", function () {
             // Iterate through all countires and re-color

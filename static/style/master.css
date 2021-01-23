@@ -31,6 +31,19 @@ Table of contents
 /*----------------------------------
 * Custom Styling
 ----------------------------------*/
+
+.map-container {
+  height: 28vw;
+}
+
+@media (max-width: 768px) {
+  .map-container{
+    height: 56vw;
+  }
+}
+
+
+
 /* Reverse order of elements in container
 in order to get the portrait on top of text.
 Resize image to be 60% of div width */
@@ -65,6 +78,11 @@ Resize image to be 60% of div width */
 .map{
   width: 100%;
   height: 100%;
+}
+
+.map svg{
+  width: 100%;
+  height: auto;
 }
 
 .modal-open[style] {
