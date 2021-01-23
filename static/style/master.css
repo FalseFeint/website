@@ -33,7 +33,7 @@ Table of contents
 ----------------------------------*/
 
 .map-container {
-  height: 42vw;
+  height: 30vw;
 }
 
 @media (max-width: 768px) {
