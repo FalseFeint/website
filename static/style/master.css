@@ -33,12 +33,12 @@ Table of contents
 ----------------------------------*/
 
 .map-container {
-  height: 28vw;
+  height: 42vw;
 }
 
 @media (max-width: 768px) {
   .map-container{
-    height: 56vw;
+    height: 50vw;
   }
 }
 
