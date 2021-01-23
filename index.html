@@ -2679,7 +2679,7 @@
     <!-- footer End -->
 
     <!-- jquery -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <!-- <script src="static/js/jquery-3.2.1.min.js"></script> -->
     <!-- <script src="static/js/jquery-migrate-3.0.0.min.js"></script> -->
     <!-- end jquery -->
@@ -2710,14 +2710,14 @@
                     selectedRegions: null,
                     showTooltip: true,
                 });
+
+                //  Iterate through all countires and re-color
+                for (var i = 0; i < countries.length; i++) {
+                    jQuery('#vmap').vectorMap('set', 'colors', countries[i], '#0076BE');
+                }
             });
         });
-        jQuery(window).on("load", function () {
-            // Iterate through all countires and re-color
-            for (var i = 0; i < countries.length; i++) {
-                jQuery('#vmap').vectorMap('set', 'colors', countries[i], '#0076BE');
-            }
-        });
+
     </script>
     <!-- End VMap-->
 
