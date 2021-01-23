@@ -31,6 +31,13 @@ Table of contents
 /*----------------------------------
 * Custom Styling
 ----------------------------------*/
+/* About image */
+.about-img {
+  width: 100%;
+  height: auto;
+}
+
+/* Placeholder color */
 .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgb(201, 201, 201);
   opacity: 1; /* Firefox */
