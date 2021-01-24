@@ -58,7 +58,7 @@
 				* One Page
 		----------------------*/
 	NAY.OnePage = function () {
-		$('.header-left a[href*="#"]:not([href="#"]), .go-to a[href*="#"]:not([href="#"])').on('click', function () {
+		$('.header-left a[href*="#"]:not([href="#"])').on('click', function () {
 			if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
 				var target = $(this.hash);
 				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -71,13 +71,13 @@
 			}
 		});
 
-		$('.header-nav a[href*="#"]:not([href="#"])').on('click', function () {
+		$('.header-nav a[href*="#"]:not([href="#"]), .go-to a[href*="#"]:not([href="#"])').on('click', function () {
 			if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
 				var target = $(this.hash);
 				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 				if (target.length) {
 					$('html,body').animate({
-						scrollTop: target.offset().top - 60,
+						scrollTop: target.offset().top - 40,
 					}, 1000);
 					return false;
 				}
