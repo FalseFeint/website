@@ -31,6 +31,12 @@ Table of contents
 /*----------------------------------
 * Custom Styling
 ----------------------------------*/
+/* Fix sizing svgs in modals */
+.modal-img {
+  width: 100%;
+  height: auto;
+}
+
 /* Custom font to avoid using h6 and performing poorly in lighthouse*/
 .custom-font h2{
   font-size: 18px; 
