@@ -31,6 +31,37 @@ Table of contents
 /*----------------------------------
 * Custom Styling
 ----------------------------------*/
+/* Custom font to avoid using h6 and performing poorly in lighthouse*/
+.custom-font h2{
+  font-size: 18px; 
+}
+
+.skill-lt .custom-font h2 {
+  font-size: 16px;
+  margin: 0 0 10px; }
+
+.home-banner-01 .custom-font h2 {
+  color: #090a0c;
+  font-size: 18px;
+  margin: 0 0 15px; }
+  @media (max-width: 991px) {
+    .home-banner-01 .custom-font h2 {
+      font-size: 15px; } }
+  @media (max-width: 767px) {
+    .home-banner-01 .custom-font h2 {
+      font-size: 14px; } }
+
+.about-me .custom-font h2 {
+  color: #090a0c;
+  font-weight: 400;
+  margin: 0 0 20px; }
+
+.contact-info .media-body .custom-font h2 {
+  font-size: 15px;
+  font-weight: 500;
+  color: #090a0c;
+  margin-bottom: 8px; }
+
 /* About image */
 .about-img {
   width: 100%;
