@@ -31,6 +31,19 @@ Table of contents
 /*----------------------------------
 * Custom Styling
 ----------------------------------*/
+/* Custom div sizing to avoid using col-md and col-lg which cause header image
+to jump around*/
+.custom-div {
+  width: 100%;
+  padding-left: 0px;
+}
+
+@media (min-width: 992px) {
+  .custom-div {
+      width: 50%;
+      padding-left: 15px;
+  }
+  
 /* Fix sizing svgs in modals */
 .modal-img {
   width: 100%;
