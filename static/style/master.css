@@ -43,7 +43,8 @@ to jump around*/
       width: 50%;
       padding-left: 15px;
   }
-  
+}
+
 /* Fix sizing svgs in modals */
 .modal-img {
   width: 100%;
