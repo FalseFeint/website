@@ -1104,6 +1104,18 @@
                 height: 56vw
             }
         }
+
+        .custom-div {
+            width: 100%;
+            padding-left: 0px;
+        }
+
+        @media (min-width: 992px) {
+            .custom-div {
+                width: 50%;
+                padding-left: 15px;
+            }
+        }
     </style>
 </head>
 <!-- Body Start -->
@@ -1166,7 +1178,7 @@
         <section id="home" class="home-banner-01">
             <div class="container">
                 <div class="row full-screen align-items-center p-100px-tb">
-                    <div class="col-lg-6 ">
+                    <div class="custom-div">
                         <div class="ht-text">
                             <h6>Hi there! I'm...</h6>
                             <h1>Daniel Stabile</h1>
@@ -1182,7 +1194,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6  portrait-header">
+                    <div class="custom-div portrait-header">
                         <img src="static/img/portrait_circle_blue.webp" width="300" height="300" alt="Daniel Stabile">
                     </div>
                 </div>
