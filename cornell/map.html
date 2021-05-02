@@ -1,0 +1,159 @@
+<html>
+
+<head>
+  <title>INFO 3300 - Homework 6</title>
+
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="https://unpkg.com/topojson-server@3"></script>
+  <script src="https://d3js.org/topojson.v3.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" type="text/css">
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+  <script src="leaflet.ajax.min.js"></script>
+
+  <style>
+    #mapid {
+      height: 100%;
+    }
+
+    .info {
+      padding: 6px 8px;
+      font: 14px/16px Arial, Helvetica, sans-serif;
+      background: white;
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+    }
+
+    .info h4 {
+      margin: 0 0 5px;
+      color: #777;
+    }
+  </style>
+
+  <div id="mapid"></div>
+
+
+</head>
+
+<body>
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.2/jquery.ui.touch-punch.min.js"></script>
+  <script src="SliderControl.js" type="text/javascript"></script>
+
+  <script>
+    var sliderControl = null;
+    var mymap = L.map('mapid').setView([42.447555, -76.481407], 17);
+
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      maxZoom: 18,
+      id: 'mapbox/light-v10',
+      tileSize: 512,
+      zoomOffset: -1,
+      accessToken: 'pk.eyJ1IjoiZGFuc3RhYmlsZSIsImEiOiJja282aXZ2OGEweXEwMm9zMmhqcGIycHc2In0.lphD_Si3kIFeBxJ4qCXjYg'
+    }).addTo(mymap);
+
+
+    // https://www.youtube.com/watch?v=AcPJtA41-5Q&ab_channel=MikeMiller
+    function style(feature) {
+      return {
+        weight: 2,
+        color: 'red'
+      }
+    }
+
+    function highlightFeature(e) {
+      var layer = e.target;
+
+      layer.setStyle({
+        weight: 5,
+        color: '#666',
+        dashArray: '',
+        fillOpacity: 0.7
+      });
+
+      if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+        layer.bringToFront();
+      }
+      info.update(layer.feature.properties);
+    }
+
+    function resetHighlight(e) {
+      geojson.resetStyle(e.target);
+      info.update();
+    }
+
+    function onEachFeature(feature, layer) {
+      layer.on({
+        mouseover: highlightFeature,
+        mouseout: resetHighlight
+      })
+    }
+
+    // Add geoJSON
+    var geojson = new L.GeoJSON.AJAX("cornell.geojson", {
+      style: style,
+      onEachFeature: onEachFeature
+    });
+    console.log(geojson);
+    geojson.addTo(mymap);
+
+
+    // Control Boxs
+    var info = L.control();
+
+    info.onAdd = function (mymap) {
+      this._div = L.DomUtil.create('div', 'info');
+      this.update();
+      return this._div;
+    }
+
+    info.update = function (props) {
+      this._div.innerHTML = '<h4>Cornell University Building Facts</h4>'
+        + (props ?
+          '<h4>' + props.Building + '</h4><br />'
+          + '<h4>Type: </h4>' + props.Type
+          + '<h4>Location: </h4>' + props.Location + '<br />'
+          + '<h4>Address: </h4>' + props["#"] + ' ' + props.Street + '</b><br />'
+          + '<h4>Architect: </h4>' + props.Architect + '</b><br />'
+          + '<h4>Namesake: </h4>' + props.Namesake + '</b><br />'
+          + '<h4>Namesake Alive: </h4>' + props['Namesake Living?'] + '</b><br />'
+          + '<h4>Opened: </h4>' + props.Month + ' ' + props.Opened
+
+          : 'Hover over a building');
+    };
+
+    info.addTo(mymap);
+
+    //Fetch some data from a GeoJSON file
+    $.getJSON("cornell.geojson", function (json) {
+
+      var testlayer = L.geoJson(json);
+      var sliderControl = L.control.sliderControl({
+        position: "bottomleft",
+        layer: testlayer,
+        range: true
+      });
+
+      //Make sure to add the slider to the map ;-)
+      mymap.addControl(sliderControl);
+      //An initialize the slider
+      sliderControl.startSlider();
+    });
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>
