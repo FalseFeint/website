@@ -14,7 +14,7 @@
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
-  <script src="leaflet.ajax.min.js"></script>
+  <script src="cornell/leaflet.ajax.min.js"></script>
 
   <style>
     #mapid {
@@ -45,7 +45,7 @@
   <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.2/jquery.ui.touch-punch.min.js"></script>
-  <script src="SliderControl.js" type="text/javascript"></script>
+  <script src="cornell/SliderControl.js" type="text/javascript"></script>
 
   <script>
     var sliderControl = null;
@@ -98,7 +98,7 @@
     }
 
     // Add geoJSON
-    var geojson = new L.GeoJSON.AJAX("cornell.geojson", {
+    var geojson = new L.GeoJSON.AJAX("cornell/cornell.geojson", {
       style: style,
       onEachFeature: onEachFeature
     });
