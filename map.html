@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <title>INFO 3300 - Homework 6</title>
+  <title>Cornell Building Info</title>
 
   <script src="https://d3js.org/d3.v6.min.js"></script>
   <script src="https://unpkg.com/topojson-server@3"></script>
@@ -133,7 +133,7 @@
     info.addTo(mymap);
 
     //Fetch some data from a GeoJSON file
-    $.getJSON("cornell.geojson", function (json) {
+    $.getJSON("cornell/cornell.geojson", function (json) {
 
       var testlayer = L.geoJson(json);
       var sliderControl = L.control.sliderControl({
@@ -142,6 +142,7 @@
         range: true
       });
 
+      console.log("here")
       //Make sure to add the slider to the map ;-)
       mymap.addControl(sliderControl);
       //An initialize the slider
