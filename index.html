@@ -83,10 +83,10 @@
                             <h6>Hi there! I'm...</h6>
                             <h1>Daniel Stabile</h1>
                             <h2>A Passionate <span id="type-it"></span></h2>
-                            <p> I'm an aspiring engineer-physician studying computer science
-                                at Cornell University. I hope to one day develop inexpensive
-                                medical equipment and use them around the world as a practicing
-                                doctor.
+                            <p> I'm a Master's student studying computer science
+                                at Cornell University. I do research in assistive robotics at the <a href="https://emprise.cs.cornell.edu/">EmPRISE Lab</a>
+                                with the goal of giving autonomy to people with disabilities in activities of daily living (ADLs).  My project focuses on
+                                aiding people with mobility limitations with food preparation.
                             </p>
                             <div class="btn-bar go-to">
                                 <a class="m-btn m-btn-theme" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
@@ -152,9 +152,9 @@
                             <!-- <h4>A Little About Me...</h4> -->
                             <h6>Born in <span class="theme-color">Ecuador</span> raised in <span class="theme-color">New
                                     York</span></h6>
-                            <p> I'm currently involved in a biomedical
-                                start up, undergraduate research, and have worked on a project engineering team to create biomedical equipment
-                                for competitions. Click the link below to learn more about what I've worked on!
+                            <p> I received my BS from Cornell Engineering in CS and am currently pursuing
+                                my Master's in CS as well.  After graduating in May 2023, I plan to join the workforce. 
+                                Click the link below to learn more about what I've worked on!
                             </p>
                             <div class="btn-bar go-to go-to-next">
                                 <a class="m-btn m-btn-theme" href="#work">View Work</a>
@@ -386,6 +386,162 @@
                 <div class="portfolio-content lightbox-gallery">
                     <div class="container">
                         <div class="portfolio-content lightbox-gallery">
+
+                            <!-- Group -->
+                            <div class="grid-item product branding">
+                                <div class="portfolio-box-01">
+                                    <div class="portfolio-img">
+                                        <img src="static/img/projects/pancake_flip.svg"
+                                            alt="SVG element for Daniel Stabile's website">
+                                    </div>
+                                    <div class="portfolio-info">
+                                        <h5>Project</h5>
+                                        <span>2022</span>
+                                    </div>
+                                    <a class="link-overlay" href="#" data-toggle="modal"
+                                        data-target="#modalPancake"></a>
+                                </div>
+                            </div> <!-- grid item -->
+
+                            <!-- Modal -->
+                            <div class="modal fade top" id="modalPancake" tabindex="-1" role="dialog">
+                                <div class="modal-dialog modal-full-height modal-top modal-xl" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalPreviewLabel"> CS 6751 - Robot Manipulation Final Project
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="col-md-12 p-3">
+                                            <div class="float-left  col-5 col-lg-4 pl-0">
+                                                <img class="" src="static/img/projects/pancake_flip.svg"
+                                                    alt="SVG element for Daniel Stabile's website">
+                                            </div>
+                                            <div class="single-post-content-wrapper ">
+                                                <h6>January 2022 - May 2022</h6>
+                                                For our final project we worked with a WidowX robot from Interbotix and trained it to flip pancakes!
+                                                Our setup included 3 realsense cameras, AR tags mounted on pancakes, a custom 3D printed frying pan, and a cage surrounding the robot.
+                                                By collecting rosbags of joint states and velocities during demo flips we were able to train a model that took
+                                                in the joint/velocity states of the robot and the pose of the pancake (poses were obtained with AR tags) and outputted
+                                                velocity commands for each joint.  Here's a video of our project: <a href="https://www.youtube.com/watch?v=RDyN1C-MnKs&ab_channel=EmPRISELab"> Pancake Flipping Robot</a>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer d-flex">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal -->
+
+                            <!-- Group -->
+                            <div class="grid-item product branding">
+                                <div class="portfolio-box-01">
+                                    <div class="portfolio-img">
+                                        <img src="static/img/projects/iuu.svg"
+                                            alt="SVG element for Daniel Stabile's website">
+                                    </div>
+                                    <div class="portfolio-info">
+                                        <h5>Project</h5>
+                                        <span>2021</span>
+                                    </div>
+                                    <a class="link-overlay" href="#" data-toggle="modal"
+                                        data-target="#modalIUU"></a>
+                                </div>
+                            </div> <!-- grid item -->
+
+                            <!-- Modal -->
+                            <div class="modal fade top" id="modalIUU" tabindex="-1" role="dialog">
+                                <div class="modal-dialog modal-full-height modal-top modal-xl" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalPreviewLabel"> Illegal, Unreported, and Unregulated Fishing
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="col-md-12 p-3">
+                                            <div class="float-left  col-5 col-lg-4 pl-0">
+                                                <img class="" src="static/img/projects/iuu.svg"
+                                                    alt="SVG element for Daniel Stabile's website">
+                                            </div>
+                                            <div class="single-post-content-wrapper ">
+                                                <h6>August 2021 - December 2021</h6>
+                                                This was another project done with MIT Lincoln Laboratory and other Cornell students.
+                                                The goal was to train a model that would take in SAR satellite data, identify
+                                                vessels, and categorize them as IUU or not.  IUU fishing is a problem often associated with drug/human
+                                                trafficking and other illegal activities not to mention it can wreck ecosystems and often is done in waters 
+                                                of developing nations who don't have the resources to combat it.
+
+                                                This project was for the xView3 challenge and while our team did not perform well, it was a huge learning 
+                                                lesson for me. If nothing else it, taught me a lot about working in cross-institutional teams and I like 
+                                                to think that the experience will be very helpful in my future career.
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer d-flex">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal -->
+
+                            <!-- Group -->
+                            <div class="grid-item product branding">
+                                <div class="portfolio-box-01">
+                                    <div class="portfolio-img">
+                                        <img src="static/img/projects/anomalous_flight.svg"
+                                            alt="SVG element for Daniel Stabile's website">
+                                    </div>
+                                    <div class="portfolio-info">
+                                        <h5>Project</h5>
+                                        <span>2021</span>
+                                    </div>
+                                    <a class="link-overlay" href="#" data-toggle="modal"
+                                        data-target="#modalAnomalousFlights"></a>
+                                </div>
+                            </div> <!-- grid item -->
+
+                            <!-- Modal -->
+                            <div class="modal fade top" id="modalAnomalousFlights" tabindex="-1" role="dialog">
+                                <div class="modal-dialog modal-full-height modal-top modal-xl" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalPreviewLabel"> Anomalous Flight Detection
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="col-md-12 p-3">
+                                            <div class="float-left  col-5 col-lg-4 pl-0">
+                                                <img class="" src="static/img/projects/anomalous_flight.svg"
+                                                    alt="SVG element for Daniel Stabile's website">
+                                            </div>
+                                            <div class="single-post-content-wrapper ">
+                                                <h6>June 2021 - August 2021</h6>
+                                                This summer I interned at MIT Lincoln Laboratories and worked on a project focused
+                                                detecting anomalous flight activities using machine learning.  I can't comment much
+                                                on this project for security reasons, but my core contribution was developing a pipeline
+                                                generate synthetic data which could be used for training.  The problem with detecting 
+                                                anomalous flight activities is that they're anomalous... and hence rare.  Using synthetic
+                                                data helps create example data for models to train on!
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer d-flex">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal -->
+
                             <div class="grid-item product branding">
                                 <div class="portfolio-box-01">
                                     <div class="portfolio-img">
