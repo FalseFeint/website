@@ -1,1 +1,14 @@
 node_modules
+
+# macOS
+.DS_Store
+
+# Lighthouse reports
+*.json
+!*.geojson
+
+# Screenshots and one-off captures
+Screenshot*.png
+
+# Local resume builds
+Stabile_Daniel_*.pdf
