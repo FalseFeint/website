@@ -186,11 +186,12 @@
     syncActive();
     el.addEventListener('scroll', syncActive);
 
-    // Auto-rotate (respecting reduced motion)
+    // Auto-rotate (respecting reduced motion). Pause while any testimonial is expanded.
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       var timer = null;
       var start = function () {
         timer = setInterval(function () {
+          if (el.querySelector('.testimonial-col-01.expanded')) return;
           var next = (current + 1) % items.length;
           el.scrollTo({ left: items[next].offsetLeft, behavior: 'smooth' });
         }, 5000);
@@ -200,6 +201,50 @@
       el.addEventListener('mouseenter', stop);
       el.addEventListener('mouseleave', start);
     }
+  })();
+
+  // --- Testimonial "Read more" toggle (mobile only, when text overflows the clamp) ---
+  (function readMore() {
+    var cards = document.querySelectorAll('.testimonial-carousel .testimonial-col-01');
+    if (!cards.length) return;
+
+    cards.forEach(function (card) {
+      var p = card.querySelector(':scope > p');
+      if (!p) return;
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'testimonial-read-more';
+      btn.textContent = 'Read more';
+      btn.setAttribute('aria-expanded', 'false');
+      btn.addEventListener('click', function () {
+        var expanded = card.classList.toggle('expanded');
+        btn.textContent = expanded ? 'Read less' : 'Read more';
+        btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      });
+      p.insertAdjacentElement('afterend', btn);
+    });
+
+    function refresh() {
+      cards.forEach(function (card) {
+        var p = card.querySelector(':scope > p');
+        var btn = card.querySelector('.testimonial-read-more');
+        if (!p || !btn) return;
+        if (card.classList.contains('expanded')) {
+          btn.classList.add('is-needed');
+          return;
+        }
+        btn.classList.toggle('is-needed', p.scrollHeight > p.clientHeight + 2);
+      });
+    }
+
+    refresh();
+    // The full stylesheet loads async, so re-check after it's applied.
+    window.addEventListener('load', refresh);
+    var resizeTimer = null;
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(refresh, 150);
+    });
   })();
 
   // --- World map: load visited countries from countries.txt ---
