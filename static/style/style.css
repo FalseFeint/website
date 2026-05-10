@@ -103,7 +103,7 @@ textarea { resize: vertical; }
 .gray-bg { background-color: #f2f5f8; }
 .white-bg { background-color: #fff; }
 .dark-color { color: #090a0c; }
-.theme-color { color: #0076be; }
+.theme-color { color: #0064a1; }
 
 /* --- Typography Helpers --- */
 .font-alt { font-family: Arial, sans-serif; }
@@ -312,7 +312,7 @@ section { scroll-margin-top: 60px; }
 .box-shadow { box-shadow: 0 3px 10px 0 rgba(38, 59, 94, 0.1); }
 
 @media (min-width: 992px) { .about-me { padding-left: 40px; } }
-.about-me h6 { color: #090a0c; font-weight: 400; margin: 0 0 20px; }
+.about-me h4 { color: #090a0c; font-weight: 400; margin: 0 0 20px; }
 .about-me .btn-bar { margin-top: 30px; }
 
 /* ============================================
@@ -363,7 +363,7 @@ section { scroll-margin-top: 60px; }
   justify-content: center; align-items: center;
 }
 .portfolio-box-01:hover .portfolio-info { opacity: 1; }
-.portfolio-box-01 .portfolio-info h5 {
+.portfolio-box-01 .portfolio-info h4 {
   color: #fff; font-size: 25px; font-weight: 600;
   display: inline-block; margin: 0 0 10px;
   position: relative; transition: left 0.35s ease; left: -25px;
@@ -376,7 +376,7 @@ section { scroll-margin-top: 60px; }
   position: relative; left: -25px;
 }
 .portfolio-box-01:hover .portfolio-info span { left: 0; }
-@media (max-width: 991px) { .portfolio-box-01 .portfolio-info h5 { font-size: 20px; } }
+@media (max-width: 991px) { .portfolio-box-01 .portfolio-info h4 { font-size: 20px; } }
 
 .modal-img { width: 100%; height: auto; }
 
@@ -476,7 +476,7 @@ body.modal-open { overflow: hidden; padding-right: 0 !important; }
   margin: 0 0 20px;
   color: #555a64;
 }
-.testimonial-carousel .testimonial-col-01 .tc-meta h6 {
+.testimonial-carousel .testimonial-col-01 .tc-meta h4 {
   font-family: Arial, sans-serif;
   font-weight: 600; color: #090a0c;
 }
@@ -512,7 +512,7 @@ body.modal-open { overflow: hidden; padding-right: 0 !important; }
   letter-spacing: 0.5px;
 }
 .tc-meta { flex: 1; min-width: 0; }
-.tc-meta h6 { margin: 0 0 2px 0; font-size: 15px; }
+.tc-meta h4 { margin: 0 0 2px 0; font-size: 15px; }
 .tc-meta span { font-size: 13px; color: #888; }
 .tc-meta .tc-date::before {
   content: " · ";
