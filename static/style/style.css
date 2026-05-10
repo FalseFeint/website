@@ -340,9 +340,13 @@ section { scroll-margin-top: 60px; }
    ============================================ */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
 }
+@media (max-width: 1199px) { .portfolio-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 991px)  { .portfolio-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 767px)  { .portfolio-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 479px)  { .portfolio-grid { grid-template-columns: 1fr; } }
 
 .portfolio-box-01 { position: relative; overflow: hidden; border-radius: 5px; }
 .portfolio-box-01 img {
