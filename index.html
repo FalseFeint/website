@@ -17,6 +17,8 @@
     <title>Daniel Stabile</title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="favicon.svg">
+    <!-- Preload LCP image so the browser can fetch it immediately -->
+    <link rel="preload" as="image" href="static/img/portrait_circle_blue-600.webp" fetchpriority="high">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="static/style/style.css">
 </head>
@@ -104,7 +106,7 @@
                         </div>
                     </div>
                     <div class="custom-div portrait-header">
-                        <img src="static/img/portrait_circle_blue.webp" width="300" height="300" alt="Daniel Stabile">
+                        <img src="static/img/portrait_circle_blue-600.webp" width="300" height="300" fetchpriority="high" alt="Daniel Stabile">
                     </div>
                 </div>
             </div>
@@ -136,7 +138,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-5 m-15px-tb">
                         <div class="about-me-img box-shadow">
-                            <img class="about-img" src="static/img/about-us.webp" width=756 height=756
+                            <img class="about-img" src="static/img/about-us-708.webp" width=708 height=708
                                 alt="Daniel Stabile in Ecuador">
                             <div class="nav social-icon">
                                 <a href="https://www.linkedin.com/in/danstabile/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#icon-linkedin"/></svg></a>
