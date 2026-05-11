@@ -346,7 +346,6 @@ section { scroll-margin-top: 60px; }
 @media (max-width: 1199px) { .portfolio-grid { grid-template-columns: repeat(4, 1fr); } }
 @media (max-width: 991px)  { .portfolio-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 767px)  { .portfolio-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 479px)  { .portfolio-grid { grid-template-columns: 1fr; } }
 
 .portfolio-box-01 { position: relative; overflow: hidden; border-radius: 5px; }
 .portfolio-box-01 img {
