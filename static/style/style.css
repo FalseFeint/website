@@ -273,8 +273,8 @@ header { transition: background 0.3s; }
 .section { padding: 50px 0; }
 section { scroll-margin-top: 60px; }
 
-.section-title { margin-bottom: 35px; }
-@media (max-width: 767px) { .section-title { margin-bottom: 25px; } }
+.section-title { margin-bottom: 18px; }
+@media (max-width: 767px) { .section-title { margin-bottom: 12px; } }
 
 .section-title h3 {
   font-weight: 700; font-size: 35px;
