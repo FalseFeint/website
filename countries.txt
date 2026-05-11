@@ -22,3 +22,8 @@ mx
 si
 gh
 nl
+cr
+ni
+sg
+jp
+kr
