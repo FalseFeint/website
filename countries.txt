@@ -27,3 +27,5 @@ ni
 sg
 jp
 kr
+gb
+ma
